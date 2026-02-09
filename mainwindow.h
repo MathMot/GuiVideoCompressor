@@ -30,6 +30,8 @@ private slots:
 
     void on_pushButton_compress_pressed();
 
+    void changeAppStyle(QString style);
+
     void updateInfo();
 
     void job1StartLoop();

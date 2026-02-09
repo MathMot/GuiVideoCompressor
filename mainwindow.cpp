@@ -14,7 +14,7 @@
 #include <QUrl>
 #include <QStyleFactory>
 
-//QSettings default values
+//QSettings default valuess
 double defaultSizeLimit = 50;
 int defaultIndexSizeType = 5;
 QString defaultVideoFolder = QDir::homePath();
@@ -126,7 +126,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->comboBox_theme->setCurrentIndex(defaultIntIndex);
 
     //Sets the theme
-    qApp->setStyle(ui->comboBox_theme->currentText());
+    changeAppStyle(ui->comboBox_theme->currentText());
+
 
     //Creates if needed the folder for ffmpeg
     QDir parentFolder(QCoreApplication::applicationDirPath());
@@ -358,7 +359,7 @@ void MainWindow::updateInfo(){
             gotTime = true;
         }
     }
-//Splits every values from time=00:00:05.12 and converts all to seconds
+    //Splits every values from time=00:00:05.12 and converts all to seconds
     if (gotTime){
         QStringList parts = ffmpegOutput.split(':');
         if (parts.size() == 3){
@@ -393,6 +394,54 @@ void MainWindow::updateInfo(){
 
 }
 
+//Changes the theme of the app + sets the background of the progress bar
+void MainWindow::changeAppStyle(QString style){
+
+    qApp->setStyle(style);
+
+    //Sets the progress bar style depending on the theme
+
+    QString progressBarDark = R"(
+QProgressBar {
+    height: 22px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+QProgressBar::chunk {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #4fc3f7, stop:1 #0288d1
+    );
+    border-radius: 6px;
+}
+)";
+
+    QString progressBarLight = R"(
+QProgressBar {
+    height: 22px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: black;
+    text-align: center;
+}
+QProgressBar::chunk {
+    background-color: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #64b5f6, stop:1 #1976d2
+    );
+    border-radius: 6px;
+}
+)";
+
+    bool isDarkTheme =
+        qApp->palette().color(QPalette::Window).lightness() < 128;
+
+    ui->progressBar->setStyleSheet(isDarkTheme ? progressBarDark : progressBarLight);
+}
 
 //Starting the compression of all of the selected videos if any
 void MainWindow::on_pushButton_compress_pressed()
@@ -902,7 +951,7 @@ void MainWindow::on_pushButton_3_pressed()
 void MainWindow::on_comboBox_theme_currentIndexChanged(int index)
 {
     QSettings settings;
-    qApp->setStyle(ui->comboBox_theme->currentText());
+    changeAppStyle(ui->comboBox_theme->currentText());
     settings.setValue("themeIndex",index);
 }
 
