@@ -30,15 +30,15 @@ private slots:
 
     void on_pushButton_compress_pressed();
 
-    void UpdateInfo();
+    void updateInfo();
 
-    void Job1StartLoop();
+    void job1StartLoop();
 
-    void Job2GetVideoData();
+    void job2GetVideoData();
 
-    void Job3Pass1();
+    void job3Pass1();
 
-    void Job3Pass2();
+    void job3Pass2();
 
     VideoJob& CurrentVJ();
 
@@ -53,9 +53,9 @@ private slots:
 
     void on_pushButton_open_deps_folder_pressed();
 
-    void RefreshDependencies();
+    void refreshDependencies();
 
-    bool TestProcess(QString processName);
+    bool testProcess(QString processName);
 
     void on_pushButton_3_pressed();
 
