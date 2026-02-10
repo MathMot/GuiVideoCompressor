@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>resources/icons/GUIVideoCompressorLogo.png</file>
+    </qresource>
+</RCC>

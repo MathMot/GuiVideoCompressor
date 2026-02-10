@@ -67,6 +67,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    this->setWindowTitle("GUIVideoCompressor by Math");
+    this->setWindowIcon(QIcon(":/icons/resources/icons/GUIVideoCompressorLogo.png"));
+
     windowHeight = this->height();
     windowWidth = this->width();
 
