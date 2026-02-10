@@ -838,7 +838,7 @@ void MainWindow::on_pushButton_open_output_folder_pressed()
 //Extends the window to display the dependencies settings, pretty neat i know i know i'm the best
 void MainWindow::on_pushButton_open_settings_pressed()
 {
-    int extendValue = (isExtended ? -200 : 200);
+    int extendValue = (isExtended ? -230 : 230);
     isExtended = !isExtended;
 
     this->setFixedSize(windowWidth, windowHeight + extendValue);
