@@ -574,6 +574,8 @@ void MainWindow::job2GetVideoData(){
         if (exitCode != 0) {
             qWarning() << "Error FFMPEG";
             qWarning () << exitCode;
+            currentLog.overrideMessage = "Error FFMPEG : "+ QString::number(exitCode) + "\n"+ffprobe->readAllStandardError();
+            updateInfo();
             ffprobe->deleteLater();
             return;
         }
@@ -674,6 +676,8 @@ void MainWindow::job3Pass1(){
         if (exitCode != 0) {
             qWarning() << "Error FFMPEG";
             qWarning() << exitCode;
+            currentLog.overrideMessage = "Error FFMPEG : "+ QString::number(exitCode) + "\n"+ffmpegPass1->readAllStandardError();
+            updateInfo();
             ffmpegPass1->deleteLater();
             return;
         }
@@ -771,6 +775,8 @@ void MainWindow::job3Pass2(){
         if (exitCode != 0) {
             qWarning() << "Error FFMPEG";
             qWarning() << exitCode;
+            currentLog.overrideMessage = "Error FFMPEG : "+ QString::number(exitCode) + "\n"+ffmpegPass2->readAllStandardError();
+            updateInfo();
             ffmpegPass2->deleteLater();
             return;
         }
