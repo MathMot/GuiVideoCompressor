@@ -133,7 +133,7 @@ MainWindow::MainWindow(QWidget *parent)
             }
         }
 
-        ui->comboBox_theme->setCurrentIndex(storedIndex);
+       defaultIntIndex = storedIndex;
     }
 
     //Saves the default settings values
