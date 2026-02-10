@@ -10,185 +10,13 @@
     <x>0</x>
     <y>0</y>
     <width>398</width>
-    <height>622</height>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="button_AddVideos">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>151</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Add Videos</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="videoList">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>151</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <property name="alternatingRowColors">
-     <bool>true</bool>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>32</width>
-      <height>32</height>
-     </size>
-    </property>
-    <property name="verticalScrollMode">
-     <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
-    </property>
-    <property name="horizontalScrollMode">
-     <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
-    </property>
-    <property name="movement">
-     <enum>QListView::Movement::Static</enum>
-    </property>
-    <property name="viewMode">
-     <enum>QListView::ViewMode::ListMode</enum>
-    </property>
-    <property name="uniformItemSizes">
-     <bool>true</bool>
-    </property>
-    <property name="itemAlignment">
-     <set>Qt::AlignmentFlag::AlignLeading</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_removeSelectedVideo">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>260</y>
-      <width>151</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Remove Selected Video</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>300</y>
-      <width>81</width>
-      <height>36</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Output Folder</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>330</y>
-      <width>346</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLineEdit" name="lineEdit_outputFolder">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="toolButton_choseOutputFolder">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset theme="QIcon::ThemeIcon::FolderOpen"/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QRadioButton" name="radioButton_clearOutputFolder">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>310</y>
-      <width>191</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string extracomment="test"/>
-    </property>
-    <property name="text">
-     <string>Clear folder from previous files</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_compress">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>400</y>
-      <width>161</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(57, 93, 255);</string>
-    </property>
-    <property name="text">
-     <string>Compress!</string>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_abort">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>400</y>
-      <width>61</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 85, 0);</string>
-    </property>
-    <property name="text">
-     <string>Abort</string>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-   </widget>
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
@@ -246,39 +74,16 @@
 Output folder and press Compress !</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::TextFormat::AutoText</enum>
+     <enum>Qt::PlainText</enum>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
     </property>
     <property name="indent">
      <number>-1</number>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_open_output_folder">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>400</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(85, 170, 127);</string>
-    </property>
-    <property name="text">
-     <string>Open Output
- Folder</string>
-    </property>
-    <property name="default">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -297,7 +102,7 @@ Output folder and press Compress !</string>
     </property>
     <property name="text">
      <string>To get FFMPEG and FFPROBE working, either download them from the github page or from their official page.
-Then place them in the &quot;deps&quot; folder of the application (located here : )
+Then place them in the &quot;deps&quot; folder of the application
 Press &quot;Refresh Dependencies&quot; to refresh
 Note : Both FFMPEG and FFPROBE can and will be used via the env variables if one is set and if they're not detected locally</string>
     </property>
@@ -305,99 +110,13 @@ Note : Both FFMPEG and FFPROBE can and will be used via the env variables if one
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_open_deps_folder">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>730</y>
-      <width>101</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Open The Deps
- Folder</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>730</y>
-      <width>101</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Refresh
- Dependencies</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_ffmpeg_detection">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>730</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>FFMPEG is Detected</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_ffprobe_detection">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>760</y>
-      <width>131</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>FFPROBE is Not Detected</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_open_settings">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>560</y>
-      <width>181</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Open Dependencies Settings</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_dependencies_check">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>560</y>
-      <width>261</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(126, 255, 169);</string>
-    </property>
-    <property name="text">
-     <string>deps text</string>
-    </property>
-    <property name="wordWrap">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
+      <x>230</x>
       <y>10</y>
-      <width>145</width>
-      <height>26</height>
+      <width>155</width>
+      <height>28</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -432,13 +151,13 @@ Note : Both FFMPEG and FFPROBE can and will be used via the env variables if one
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>180</x>
       <y>60</y>
       <width>211</width>
-      <height>27</height>
+      <height>29</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -512,18 +231,18 @@ Note : Both FFMPEG and FFPROBE can and will be used via the env variables if one
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>120</y>
-      <width>181</width>
-      <height>27</height>
+      <y>110</y>
+      <width>211</width>
+      <height>29</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <property name="sizeConstraint">
-      <enum>QLayout::SizeConstraint::SetFixedSize</enum>
+      <enum>QLayout::SetDefaultConstraint</enum>
      </property>
      <item>
       <widget class="QCheckBox" name="checkBox_outputFPS">
@@ -559,6 +278,304 @@ Note : Both FFMPEG and FFPROBE can and will be used via the env variables if one
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>300</y>
+      <width>348</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Output Folder :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_clearOutputFolder">
+         <property name="toolTip">
+          <string extracomment="test"/>
+         </property>
+         <property name="text">
+          <string>Clear folder from previous files</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_outputFolder">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton_choseOutputFolder">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset theme="QIcon::ThemeIcon::FolderOpen">
+           <normaloff>.</normaloff>.</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>171</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="button_AddVideos">
+       <property name="text">
+        <string>Add Videos</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="videoList">
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="verticalScrollMode">
+        <enum>QAbstractItemView::ScrollPerItem</enum>
+       </property>
+       <property name="horizontalScrollMode">
+        <enum>QAbstractItemView::ScrollPerItem</enum>
+       </property>
+       <property name="movement">
+        <enum>QListView::Static</enum>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::ListMode</enum>
+       </property>
+       <property name="uniformItemSizes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_removeSelectedVideo">
+       <property name="text">
+        <string>Remove Selected Video</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>390</y>
+      <width>361</width>
+      <height>102</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0,0">
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButton_compress">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(57, 93, 255);</string>
+       </property>
+       <property name="text">
+        <string>Compress!</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_abort">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 85, 0);</string>
+       </property>
+       <property name="text">
+        <string>Abort</string>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_open_output_folder">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 170, 127);</string>
+       </property>
+       <property name="text">
+        <string>Open Output
+ Folder</string>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>560</y>
+      <width>371</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QLabel" name="label_dependencies_check">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(126, 255, 169);</string>
+       </property>
+       <property name="text">
+        <string>deps text</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_open_settings">
+       <property name="text">
+        <string>Open Dependencies Settings</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>720</y>
+      <width>221</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_ffmpeg_detection">
+       <property name="text">
+        <string>FFMPEG is Detected</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_ffprobe_detection">
+       <property name="text">
+        <string>FFPROBE is Not Detected</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>720</y>
+      <width>109</width>
+      <height>102</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QPushButton" name="pushButton_open_deps_folder">
+       <property name="minimumSize">
+        <size>
+         <width>10</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Deps Folder</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>Refresh
+ Dependencies</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -566,7 +583,7 @@ Note : Both FFMPEG and FFPROBE can and will be used via the env variables if one
      <x>0</x>
      <y>0</y>
      <width>398</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

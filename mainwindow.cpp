@@ -70,10 +70,13 @@ MainWindow::MainWindow(QWidget *parent)
     windowHeight = this->height();
     windowWidth = this->width();
 
-    //Prevents the window from being resized by the user
+    //Prevents the window from being resized by the user, only works on windows
     this->setWindowFlag(Qt::MSWindowsFixedSizeDialogHint, true);
     this->setWindowFlag(Qt::WindowMaximizeButtonHint, false);
     this->statusBar()->setSizeGripEnabled(false);
+
+    //Bibux ok
+    this->setFixedSize(this->size());
 
     //Sets the different themes from the user's system
     ui->comboBox_theme->addItems(QStyleFactory::keys());
@@ -117,6 +120,17 @@ MainWindow::MainWindow(QWidget *parent)
         if (t.toInt()){
             defaultIntIndex = t.toInt();
         }
+    }else{
+        //Sets the default style/theme to Fusion
+        int storedIndex = 0;
+        for (int i = 0 ; i < ui->comboBox_theme->count() ; i ++){
+            if (ui->comboBox_theme->itemText(i) == "Fusion"){
+                storedIndex = i;
+                break;
+            }
+        }
+
+        ui->comboBox_theme->setCurrentIndex(storedIndex);
     }
 
     //Saves the default settings values
@@ -827,6 +841,7 @@ void MainWindow::on_pushButton_open_settings_pressed()
     int extendValue = (isExtended ? -200 : 200);
     isExtended = !isExtended;
 
+    this->setFixedSize(windowWidth, windowHeight + extendValue);
     resize(windowWidth, windowHeight + extendValue);
     windowHeight += extendValue;
 
