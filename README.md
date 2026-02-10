@@ -20,3 +20,8 @@ It works using Two-pass encoding and FFMPEG for video encoding.
 - And press the Compress button (a progress bar helps you estimate a duration) 
 
 ## App preview :
+[![App preview](https://github.com/MathMot/GuiVideoCompressor/blob/master/resources/preview/GuiVideoCompressorPreview.png?raw=true)]()
+
+## Installation
+
+- Download the corresponding
